@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" font-family="'Helvetica Neue', Arial, sans-serif" role="img" aria-label="Teacher OS — Grading Workspace (approved design reference): the existing production grading workflow presented in the canonical Teacher OS Workspace Standard shell">
+  <!--
+    TEACHER OS DESIGN ARTIFACT — Grading Workspace VISUAL MIGRATION.
+    Scope (ratified 2026-07-02): implement the canonical Teacher OS Workspace Standard
+    for the Grading Workspace while preserving its existing workflow, APIs, state
+    model, and teacher interactions. Reuse existing functionality; change the
+    presentation. Every element depicted exists in the production Grading Workspace
+    today (milestone stepper, gate-driven status line + Recommended Action hero,
+    Workspace Status counts, Review Results table, Workspace Tools).
+      • Sidebar is lean: Connect Assignment + the two milestone quick actions; the seven
+        existing Workspace Tools live under a single collapsed "Advanced Workflow Tools"
+        disclosure (the progressive-disclosure model already specified in
+        grading-workspace-ui-v2-design.md).
+      • Executive Summary is assignment-focused: it states the CURRENT STATE of the
+        assignment ("Ready to grade"); the milestone stepper is secondary.
+      • No Hall Pass content patterns: grading is a production workspace — no charts,
+        interpretation panels, or discussion bands. The content area is the existing
+        panel-swap region (Review Results shown; other existing panels swap in-place).
+      • MODULE ENTRY POINT PRINCIPLE (design system §6, ratified 2026-07-02): the
+        primary sidebar action represents the canonical ENTRY POINT into the module —
+        stable, independent of workflow state (Hall Pass → Check Out / Check In ·
+        Student Support → New Incident · Grading → Connect Assignment). Workflow
+        progression is communicated independently through the Executive Summary's
+        Recommended Action region. The sidebar answers "How do I begin work in this
+        module?"; the Executive Summary answers "What should I do next?"
+    Shell, spacing, typography, cards, and branding conform to the frozen canonical
+    Workspace Standard (hall-pass-workspace.svg).
+    Status: PRODUCTION reference — approved 2026-07-02, implemented 2026-07-03
+    (visual-migration PR series #216–#225; the V2 presentation is the production
+    default). No production code is built or changed by this artifact. Sample students/scores are illustrative; real artifacts never embed
+    actual student data (architecture §8).
+  -->
+  <defs>
+    <g id="brandmark">
+      <rect x="2" y="2" width="60" height="60" rx="15" fill="#0c2233"/>
+      <rect x="13" y="13" width="15" height="38" rx="7" fill="#ffffff"/>
+      <rect x="33" y="18.5" width="17" height="11" rx="5.5" fill="#74C8CC"/>
+      <rect x="33" y="34.5" width="17" height="11" rx="5.5" fill="#1AA362"/>
+    </g>
+    <filter id="cardShadow" x="-4%" y="-8%" width="108%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#1a2b3a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="1536" height="1024" fill="#ffffff"/>
+
+  <!-- =================================================================== -->
+  <!-- DARK SIDEBAR — lean: actions + collapsed workflow tools + nav        -->
+  <!-- =================================================================== -->
+  <rect x="0" y="0" width="228" height="1024" fill="#0e2138"/>
+
+  <!-- ACTIONS group -->
+  <text x="22" y="50" font-size="11" letter-spacing="1.4" font-weight="700" fill="#6a8199">ACTIONS</text>
+
+  <!-- primary action (highlighted) = existing "Connect Assignment" -->
+  <rect x="14" y="66" width="200" height="40" rx="11" fill="#2563eb"/>
+  <g stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"><line x1="34" y1="86" x2="46" y2="86"/><line x1="40" y1="80" x2="40" y2="92"/></g>
+  <text x="58" y="91" font-size="14" font-weight="700" fill="#ffffff">Connect Assignment</text>
+
+  <!-- existing milestone quick actions -->
+  <g font-size="14" fill="#c5d3e1">
+    <text x="64" y="137">Review Results</text>
+    <text x="64" y="175">Send Feedback</text>
+  </g>
+  <g fill="none" stroke="#93a9bf" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Review Results: table -->
+    <g transform="translate(34,132)"><rect x="-9" y="-7" width="18" height="14" rx="2"/><line x1="-9" y1="-2" x2="9" y2="-2"/><line x1="-2" y1="-2" x2="-2" y2="7"/></g>
+    <!-- Send Feedback: mail -->
+    <g transform="translate(34,170)"><rect x="-9" y="-6" width="18" height="13" rx="2"/><path d="M-9 -5l9 7 9-7"/></g>
+  </g>
+
+  <!-- divider -->
+  <line x1="20" y1="204" x2="208" y2="204" stroke="#21384f"/>
+
+  <!-- WORKFLOW TOOLS group — the seven existing Workspace Tools, collapsed -->
+  <text x="22" y="236" font-size="11" letter-spacing="1.4" font-weight="700" fill="#6a8199">WORKFLOW TOOLS</text>
+  <path d="M30 259l6 5-6 5" fill="none" stroke="#93a9bf" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="50" y="268" font-size="14" fill="#c5d3e1">Advanced Workflow Tools</text>
+
+  <!-- divider -->
+  <line x1="20" y1="296" x2="208" y2="296" stroke="#21384f"/>
+
+  <!-- NAVIGATION group -->
+  <text x="22" y="328" font-size="11" letter-spacing="1.4" font-weight="700" fill="#6a8199">NAVIGATION</text>
+  <!-- active nav item (Grading) -->
+  <rect x="14" y="378" width="200" height="38" rx="9" fill="#18324e"/>
+  <g font-size="14" fill="#c5d3e1">
+    <text x="64" y="364">Home</text>
+    <text x="64" y="402" font-weight="700" fill="#ffffff">Grading</text>
+    <text x="64" y="440">Hall Pass</text>
+    <text x="64" y="478">Student Support</text>
+    <text x="64" y="516">Help Center</text>
+  </g>
+  <g fill="none" stroke="#93a9bf" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Home: house -->
+    <g transform="translate(34,359)"><path d="M-7 1l7-7 7 7"/><path d="M-5 0v6h10v-6"/></g>
+    <!-- Grading: check-square (active, lighter) -->
+    <g transform="translate(34,397)" stroke="#d7e4f1"><rect x="-8" y="-8" width="16" height="16" rx="3"/><path d="M-4 0l3 3 6-7"/></g>
+    <!-- Hall Pass: runner -->
+    <g transform="translate(34,435)"><circle cx="2" cy="-7" r="2.6"/><path d="M2 -4l-3 6M2 -2l4 3M-1 2l-3 4M6 1l3 2"/></g>
+    <!-- Student Support: two people -->
+    <g transform="translate(34,473)"><circle cx="-4" cy="-3" r="3"/><circle cx="5" cy="-2" r="2.4"/><path d="M-10 6c0-4 3-6 6-6s6 2 6 6M3 6c0-3 2-4 4-4s4 1 4 4"/></g>
+    <!-- Help Center: question -->
+    <g transform="translate(34,511)"><circle cx="0" cy="0" r="8"/><path d="M-2.6 -2.4a2.6 2.6 0 1 1 3.4 2.6c-0.8 0.4-0.8 1-0.8 1.8"/><circle cx="0" cy="4.4" r="0.6" fill="#93a9bf"/></g>
+  </g>
+
+  <!-- user context (bottom) -->
+  <line x1="20" y1="942" x2="208" y2="942" stroke="#21384f"/>
+  <rect x="16" y="958" width="36" height="36" rx="9" fill="#3a5a66"/>
+  <text x="34" y="981" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">SF</text>
+  <text x="62" y="972" font-size="13" font-weight="700" fill="#ffffff">Steve Finston</text>
+  <text x="62" y="989" font-size="11" fill="#8aa0b4">Teacher</text>
+  <path d="M200 972l5 5 5-5" fill="none" stroke="#6a8199" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- =================================================================== -->
+  <!-- MAIN CONTENT — existing Assignment Overview, wsv2 skin              -->
+  <!-- =================================================================== -->
+  <!-- back link (existing "‹ All Assignments") -->
+  <text x="260" y="34" font-size="12.5" font-weight="600" fill="#1f6fe0">‹  All Assignments</text>
+  <text x="260" y="68" font-size="30" font-weight="800" fill="#14283a">Assignment Overview</text>
+  <!-- synced indicator (existing grading-sheet sync state) -->
+  <rect x="590" y="50" width="76" height="22" rx="11" fill="#e6f6ee"/>
+  <circle cx="605" cy="61" r="3.4" fill="#1aa362"/>
+  <text x="616" y="65" font-size="11.5" font-weight="700" fill="#1a7f4f">Synced</text>
+
+  <!-- controls row: active assignment (existing selector) + existing sheet/tab context -->
+  <rect x="260" y="88" width="236" height="30" rx="8" fill="#f1f5f9" stroke="#e1e8ef"/>
+  <g transform="translate(278,103)" fill="none" stroke="#7a8b9c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-4 -7h6l3 3v11h-9z"/><line x1="-2" y1="0" x2="3" y2="0"/><line x1="-2" y1="3" x2="3" y2="3"/></g>
+  <text x="294" y="108" font-size="13.5" font-weight="600" fill="#33475a">Quiz 3 — Cell Structure</text>
+  <path d="M478 101l5 5 5-5" fill="none" stroke="#8aa0b4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="516" y="108" font-size="13" fill="#8aa0b4">Sheet: Quiz 3 (Responses) · Tab: Form Responses 1 · Synced 9:41 AM</text>
+
+  <use href="#brandmark" transform="translate(1330,30) scale(0.56)"/>
+  <text x="1374" y="58" font-size="22" font-weight="700" fill="#14283a">Teacher OS</text>
+  <text x="1374" y="76" font-size="10.5" fill="#8aa0b4">Insight.  <tspan fill="#1f6fe0">Clarity.</tspan>  Impact.</text>
+
+  <!-- Assignment Summary band — assignment STATUS first (existing gate-derived
+       state), stepper secondary; Recommended Action = existing hero + reasoning -->
+  <rect x="260" y="150" width="1212" height="186" rx="16" fill="#eef4fc" stroke="#d8e6f8" filter="url(#cardShadow)"/>
+  <text x="300" y="190" font-size="12.5" letter-spacing="1.5" font-weight="700" fill="#1f6fe0">ASSIGNMENT SUMMARY</text>
+  <!-- current state of this assignment (existing workflow state, plain language) -->
+  <text x="298" y="242" font-size="36" font-weight="800" fill="#14283a">Ready to grade.</text>
+  <text x="300" y="272" font-size="14.5" fill="#41566a">18 new responses waiting · 24 of 42 graded.</text>
+  <!-- existing milestone stepper (secondary) -->
+  <g>
+    <circle cx="308" cy="304" r="8" fill="#1aa362"/>
+    <path d="M304.5 304l2.5 2.5 5-5" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="322" y="308" font-size="11.5" font-weight="700" fill="#14283a">Connect</text>
+    <line x1="378" y1="304" x2="392" y2="304" stroke="#cfdef0" stroke-width="1.6"/>
+    <circle cx="406" cy="304" r="8" fill="#1f6fe0"/>
+    <circle cx="406" cy="304" r="2.6" fill="#ffffff"/>
+    <text x="420" y="308" font-size="11.5" font-weight="700" fill="#1f6fe0">Grade</text>
+    <line x1="462" y1="304" x2="476" y2="304" stroke="#cfdef0" stroke-width="1.6"/>
+    <circle cx="490" cy="304" r="8" fill="#ffffff" stroke="#b9c9d8" stroke-width="1.6"/>
+    <text x="504" y="308" font-size="11.5" font-weight="600" fill="#8aa0b4">Review</text>
+    <line x1="552" y1="304" x2="566" y2="304" stroke="#cfdef0" stroke-width="1.6"/>
+    <circle cx="580" cy="304" r="8" fill="#ffffff" stroke="#b9c9d8" stroke-width="1.6"/>
+    <text x="594" y="308" font-size="11.5" font-weight="600" fill="#8aa0b4">Send</text>
+  </g>
+  <line x1="656" y1="180" x2="656" y2="306" stroke="#cfdef0"/>
+  <text x="692" y="190" font-size="12.5" letter-spacing="1.5" font-weight="700" fill="#1f6fe0">RECOMMENDED ACTION</text>
+  <!-- existing hero CTA (from the real WorkflowGate) -->
+  <rect x="692" y="210" width="248" height="46" rx="11" fill="#1f6fe0"/>
+  <g fill="#ffffff"><path d="M714 224l12 9-12 9z"/></g>
+  <text x="738" y="239" font-size="15" font-weight="700" fill="#ffffff">Grade 18 Responses</text>
+  <!-- existing one-line reasoning (recommendedActionView) -->
+  <text x="692" y="288" font-size="14.5" fill="#41566a">Your grading prompt is <tspan fill="#1f6fe0" font-weight="600">approved</tspan> and 18 new responses are waiting.</text>
+  <text x="692" y="310" font-size="14.5" fill="#41566a">Rows that are already graded stay unchanged.</text>
+  <circle cx="1392" cy="243" r="52" fill="#ffffff" stroke="#d3e2f4" stroke-width="2"/>
+  <g transform="translate(1392,243)" fill="none" stroke="#1f6fe0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-20 -26h26l10 10v42h-36z"/><line x1="-12" y1="-8" x2="4" y2="-8"/><line x1="-12" y1="2" x2="8" y2="2"/>
+    <path d="M-6 16l6 6 14-16"/>
+  </g>
+
+  <!-- Metric tiles — the existing Workspace Status counts, wsv2 tile skin -->
+  <rect x="260" y="356" width="288" height="150" rx="14" fill="#ffffff" stroke="#e6ebf1" filter="url(#cardShadow)"/>
+  <circle cx="306" cy="414" r="24" fill="#1aa362"/>
+  <g transform="translate(306,414)" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="-4" cy="-4" r="3.4"/><circle cx="6" cy="-2.6" r="2.8"/><path d="M-11 7c0-4.6 3.4-7 7-7s7 2.4 7 7M4 7c0-3.4 2.3-4.6 4.6-4.6s4.6 1.2 4.6 4.6"/></g>
+  <text x="346" y="410" font-size="38" font-weight="800" fill="#14283a">42</text>
+  <text x="346" y="438" font-size="12" letter-spacing="0.6" font-weight="700" fill="#5a6b7d">STUDENTS</text>
+  <text x="286" y="484" font-size="12.5" fill="#8aa0b4">Rows in the grading sheet</text>
+
+  <rect x="568" y="356" width="288" height="150" rx="14" fill="#ffffff" stroke="#e6ebf1" filter="url(#cardShadow)"/>
+  <circle cx="614" cy="414" r="24" fill="#2563eb"/>
+  <g transform="translate(614,414)" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="0" cy="0" r="11"/><path d="M-5 0l3.5 3.5 7-7"/></g>
+  <text x="654" y="410" font-size="38" font-weight="800" fill="#14283a">24</text>
+  <text x="654" y="438" font-size="12" letter-spacing="0.6" font-weight="700" fill="#5a6b7d">GRADED</text>
+  <text x="594" y="484" font-size="12.5" fill="#8aa0b4">24 of 42 responses complete</text>
+
+  <rect x="876" y="356" width="288" height="150" rx="14" fill="#ffffff" stroke="#e6ebf1" filter="url(#cardShadow)"/>
+  <circle cx="922" cy="414" r="24" fill="#7c3aed"/>
+  <g transform="translate(922,414)" fill="none" stroke="#fff" stroke-width="2.2"><circle cx="0" cy="0" r="11"/><path d="M0 -6v6l5 3" stroke-linecap="round"/></g>
+  <text x="962" y="410" font-size="38" font-weight="800" fill="#14283a">18</text>
+  <text x="962" y="438" font-size="12" letter-spacing="0.6" font-weight="700" fill="#5a6b7d">PENDING</text>
+  <text x="902" y="484" font-size="12.5" fill="#8aa0b4">Graded on the next run</text>
+
+  <rect x="1184" y="356" width="288" height="150" rx="14" fill="#ffffff" stroke="#e6ebf1" filter="url(#cardShadow)"/>
+  <circle cx="1230" cy="414" r="24" fill="#e08a1e"/>
+  <g transform="translate(1230,414)" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><line x1="-5" y1="-10" x2="-5" y2="10"/><path d="M-5 -9h11l-3 4 3 4h-11z"/></g>
+  <text x="1270" y="410" font-size="38" font-weight="800" fill="#14283a">3</text>
+  <text x="1270" y="438" font-size="12" letter-spacing="0.6" font-weight="700" fill="#5a6b7d">ERRORS</text>
+  <text x="1210" y="484" font-size="12.5" fill="#8aa0b4">Retried on the next grading run</text>
+
+  <!-- Panel-swap region — the existing content panels, wsv2 card skin.
+       Review Results shown; Form Structure / Weights / Rubric / Prompt /
+       Feedback swap in-place here exactly as they do today. -->
+  <rect x="260" y="534" width="1212" height="300" rx="14" fill="#ffffff" stroke="#e6ebf1" filter="url(#cardShadow)"/>
+  <text x="296" y="574" font-size="12.5" letter-spacing="1.4" font-weight="700" fill="#1f6fe0">REVIEW RESULTS</text>
+  <!-- existing sort control -->
+  <rect x="1280" y="558" width="156" height="24" rx="7" fill="#f1f5f9" stroke="#e1e8ef"/>
+  <text x="1294" y="574" font-size="11.5" font-weight="600" fill="#41566a">Sort: Lowest score</text>
+  <path d="M1420 568l4 4 4-4" fill="none" stroke="#8aa0b4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- table header -->
+  <g font-size="11.5" letter-spacing="0.6" font-weight="700" fill="#5a6b7d">
+    <text x="296" y="612">STUDENT</text>
+    <text x="620" y="612">SCORE</text>
+    <text x="740" y="612">STATUS</text>
+    <text x="880" y="612">FEEDBACK</text>
+  </g>
+  <line x1="296" y1="624" x2="1436" y2="624" stroke="#e6ebf1"/>
+  <!-- rows -->
+  <g font-size="13.5">
+    <text x="296" y="656" font-weight="600" fill="#14283a">Sam Ellis</text>
+    <text x="620" y="656" fill="#41566a">6 / 12</text>
+    <rect x="740" y="642" width="58" height="20" rx="9" fill="#fdf4e9"/>
+    <text x="769" y="656" text-anchor="middle" font-size="11.5" font-weight="700" fill="#c97a1e">Error</text>
+    <text x="880" y="656" fill="#8aa0b4" font-size="12.5">Row will be retried on the next grading run</text>
+    <line x1="296" y1="672" x2="1436" y2="672" stroke="#f1f5f9"/>
+
+    <text x="296" y="704" font-weight="600" fill="#14283a">Maya Chen</text>
+    <text x="620" y="704" fill="#41566a">7 / 12</text>
+    <rect x="740" y="690" width="68" height="20" rx="9" fill="#e6f6ee"/>
+    <text x="774" y="704" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1a7f4f">Graded</text>
+    <text x="880" y="704" fill="#8aa0b4" font-size="12.5">"Strong start — revisit how transport proteins move molecules across the membrane…"</text>
+    <line x1="296" y1="720" x2="1436" y2="720" stroke="#f1f5f9"/>
+
+    <text x="296" y="752" font-weight="600" fill="#14283a">Aiden Brooks</text>
+    <text x="620" y="752" fill="#41566a">9 / 12</text>
+    <rect x="740" y="738" width="68" height="20" rx="9" fill="#e6f6ee"/>
+    <text x="774" y="752" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1a7f4f">Graded</text>
+    <text x="880" y="752" fill="#8aa0b4" font-size="12.5">"Clear explanations throughout. Your diagram of the cell membrane was especially…"</text>
+    <line x1="296" y1="768" x2="1436" y2="768" stroke="#f1f5f9"/>
+
+    <text x="296" y="800" font-weight="600" fill="#14283a">Jordan Diaz</text>
+    <text x="620" y="800" fill="#41566a">—</text>
+    <rect x="740" y="786" width="72" height="20" rx="9" fill="#eef2f6"/>
+    <text x="776" y="800" text-anchor="middle" font-size="11.5" font-weight="700" fill="#5a6b7d">Pending</text>
+    <text x="880" y="800" fill="#8aa0b4" font-size="12.5">Not graded yet</text>
+  </g>
+  <text x="296" y="822" font-size="11.5" fill="#9aa9b8">Showing 4 of 42 · sorted by lowest score</text>
+
+  <!-- footer — existing behavior note + existing sync state -->
+  <text x="260" y="1011" font-size="11" fill="#9aa9b8">Grading is incremental — rows that are already graded are never changed.</text>
+  <circle cx="1352" cy="1004" r="4" fill="#1aa362"/>
+  <text x="1472" y="1008" text-anchor="end" font-size="12" fill="#5a6b7d">Synced just now</text>
+</svg>

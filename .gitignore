@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.next/
+.vinext/
+.wrangler/
+.env*
+!.env.example
+.DS_Store
+
+# Internal evidence and publication notes stay outside the public repository.
+EVIDENCE.md
+PUBLICATION_CHECKLIST.md

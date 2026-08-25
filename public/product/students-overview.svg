@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" font-family="'Helvetica Neue', Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Teacher OS Unified Student Profile design</title>
+  <desc id="desc">A canonical Teacher OS workspace that generates a factual student story from Directory, Hall Pass, and Student Support records without storing a combined profile.</desc>
+  <!-- Synthetic names and values only. This artifact changes no production code or data. -->
+  <defs>
+    <g id="brandmark">
+      <rect x="2" y="2" width="60" height="60" rx="15" fill="#0c2233"/>
+      <rect x="13" y="13" width="15" height="38" rx="7" fill="#ffffff"/>
+      <rect x="33" y="18.5" width="17" height="11" rx="5.5" fill="#74c8cc"/>
+      <rect x="33" y="34.5" width="17" height="11" rx="5.5" fill="#1aa362"/>
+    </g>
+    <filter id="shadow" x="-8%" y="-10%" width="116%" height="125%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#173044" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <rect width="1536" height="1024" fill="#f6f8fa"/>
+
+  <!-- Canonical shell. -->
+  <rect x="0" y="0" width="260" height="1024" fill="#102b3d"/>
+  <text x="28" y="70" fill="#7890a0" font-size="12" font-weight="700" letter-spacing="1.5">ACTIONS</text>
+  <rect x="24" y="92" width="212" height="50" rx="6" fill="#286fda"/>
+  <circle cx="49" cy="117" r="8" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+  <path d="M38 135c1-8 5-12 11-12s10 4 11 12" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+  <text x="70" y="123" fill="#ffffff" font-size="15" font-weight="700">Student Profile</text>
+
+  <line x1="24" y1="174" x2="236" y2="174" stroke="#294658"/>
+  <text x="28" y="218" fill="#7890a0" font-size="12" font-weight="700" letter-spacing="1.5">NAVIGATION</text>
+
+  <g fill="none" stroke="#b7c6cf" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M43 254l8-7 8 7v10H43z"/>
+    <path d="M42 308h18M45 300v16M51 294v22M57 304v12"/>
+    <circle cx="51" cy="359" r="8"/><path d="M40 376c1-8 5-12 11-12s10 4 11 12"/>
+    <path d="M42 414h18M42 420h18M42 426h18"/>
+  </g>
+  <text x="70" y="262" fill="#d9e3e8" font-size="14">Home</text>
+  <text x="70" y="312" fill="#d9e3e8" font-size="14">Hall Pass</text>
+  <text x="70" y="366" fill="#d9e3e8" font-size="14">Student Support</text>
+  <text x="70" y="424" fill="#d9e3e8" font-size="14">Student Directory</text>
+
+  <rect x="20" y="920" width="220" height="76" rx="6" fill="#163548"/>
+  <circle cx="54" cy="958" r="20" fill="#2a6471"/>
+  <text x="54" y="963" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">SF</text>
+  <text x="84" y="951" fill="#ffffff" font-size="14" font-weight="700">Teacher</text>
+  <text x="84" y="971" fill="#9fb1bc" font-size="12">Signed in</text>
+
+  <!-- Header. -->
+  <rect x="260" y="0" width="1276" height="112" fill="#ffffff"/>
+  <line x1="260" y1="111.5" x2="1536" y2="111.5" stroke="#e2e7eb"/>
+  <text x="316" y="42" fill="#152f42" font-size="22" font-weight="700">Unified Student Profile</text>
+
+  <rect x="316" y="58" width="300" height="38" rx="6" fill="#ffffff" stroke="#cfd9e0"/>
+  <text x="334" y="82" fill="#1a3446" font-size="13" font-weight="600">Jordan Lee · Algebra 1</text>
+  <path d="M588 73l6 6 6-6" fill="none" stroke="#657784" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="638" y="58" width="244" height="38" rx="6" fill="#e9eef2"/>
+  <rect x="642" y="62" width="74" height="30" rx="5" fill="#ffffff" stroke="#d6dfe4"/>
+  <text x="679" y="82" text-anchor="middle" fill="#1d5fc6" font-size="12" font-weight="700">Week</text>
+  <text x="754" y="82" text-anchor="middle" fill="#657784" font-size="12">Month</text>
+  <text x="836" y="82" text-anchor="middle" fill="#657784" font-size="12">Custom</text>
+  <text x="902" y="82" fill="#657784" font-size="12">Jul 27-Aug 2</text>
+
+  <g transform="translate(1292 18) scale(.78)"><use href="#brandmark"/></g>
+  <text x="1352" y="45" fill="#102b3d" font-size="18" font-weight="700">Teacher OS</text>
+  <text x="1352" y="65" fill="#71838f" font-size="10.5">Insight. <tspan fill="#286fda">Clarity.</tspan> Impact.</text>
+
+  <!-- Executive narrative band, intentionally uncarded. -->
+  <text x="316" y="170" fill="#286fda" font-size="12" font-weight="700" letter-spacing="1.2">STUDENT STORY</text>
+  <text x="316" y="216" fill="#152f42" font-size="30" font-weight="700">This week: 2 hall passes totaling 8 measured minutes</text>
+  <text x="316" y="252" fill="#152f42" font-size="30" font-weight="700">and 1 documented support incident.</text>
+  <text x="316" y="284" fill="#5e707d" font-size="14">Algebra 1 · Generated now from your teacher-owned records</text>
+
+  <!-- Source status row. -->
+  <line x1="316" y1="318" x2="1480" y2="318" stroke="#dce4e9"/>
+  <text x="316" y="350" fill="#71838f" font-size="12" font-weight="700" letter-spacing=".7">SOURCES</text>
+  <circle cx="404" cy="346" r="5" fill="#1aa362"/>
+  <text x="416" y="351" fill="#405766" font-size="13">Directory available</text>
+  <circle cx="566" cy="346" r="5" fill="#1aa362"/>
+  <text x="578" y="351" fill="#405766" font-size="13">Hall Pass available</text>
+  <circle cx="740" cy="346" r="5" fill="#1aa362"/>
+  <text x="752" y="351" fill="#405766" font-size="13">Student Support available</text>
+
+  <!-- Peer evidence chapters. -->
+  <g filter="url(#shadow)">
+    <rect x="316" y="388" width="566" height="244" rx="6" fill="#ffffff" stroke="#dce4e9"/>
+    <rect x="914" y="388" width="566" height="244" rx="6" fill="#ffffff" stroke="#dce4e9"/>
+  </g>
+
+  <text x="344" y="430" fill="#286fda" font-size="12" font-weight="700" letter-spacing="1">HALL PASS</text>
+  <text x="344" y="466" fill="#152f42" font-size="22" font-weight="700">Movement from class</text>
+  <text x="344" y="512" fill="#152f42" font-size="28" font-weight="700">2</text>
+  <text x="344" y="536" fill="#71838f" font-size="12">Check-outs</text>
+  <text x="496" y="512" fill="#152f42" font-size="28" font-weight="700">8 min</text>
+  <text x="496" y="536" fill="#71838f" font-size="12">Measured time</text>
+  <text x="674" y="512" fill="#152f42" font-size="20" font-weight="700">Aug 1</text>
+  <text x="674" y="536" fill="#71838f" font-size="12">Latest check-out</text>
+  <line x1="344" y1="564" x2="854" y2="564" stroke="#e5eaed"/>
+  <text x="344" y="598" fill="#286fda" font-size="13" font-weight="700">Open Hall Pass</text>
+  <path d="M455 593h10M461 589l4 4-4 4" fill="none" stroke="#286fda" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="942" y="430" fill="#16805d" font-size="12" font-weight="700" letter-spacing="1">STUDENT SUPPORT</text>
+  <text x="942" y="466" fill="#152f42" font-size="22" font-weight="700">Documented support</text>
+  <text x="942" y="512" fill="#152f42" font-size="28" font-weight="700">1</text>
+  <text x="942" y="536" fill="#71838f" font-size="12">Incident</text>
+  <text x="1094" y="512" fill="#152f42" font-size="28" font-weight="700">0</text>
+  <text x="1094" y="536" fill="#71838f" font-size="12">Communications</text>
+  <text x="1272" y="512" fill="#152f42" font-size="20" font-weight="700">Aug 1</text>
+  <text x="1272" y="536" fill="#71838f" font-size="12">Latest incident</text>
+  <line x1="942" y1="564" x2="1452" y2="564" stroke="#e5eaed"/>
+  <text x="942" y="598" fill="#16805d" font-size="13" font-weight="700">Open Student Support</text>
+  <path d="M1095 593h10M1101 589l4 4-4 4" fill="none" stroke="#16805d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Interpretation boundary and discussion. -->
+  <rect x="316" y="670" width="1164" height="92" rx="6" fill="#eef7f3" stroke="#d3e9df"/>
+  <text x="344" y="706" fill="#16805d" font-size="12" font-weight="700" letter-spacing="1">READ WITH CONTEXT</text>
+  <text x="344" y="738" fill="#405766" font-size="15">These records describe different parts of the student's experience. Review the source details before drawing conclusions.</text>
+
+  <text x="316" y="816" fill="#152f42" font-size="20" font-weight="700">Questions for discussion</text>
+  <line x1="316" y1="838" x2="1480" y2="838" stroke="#dce4e9"/>
+  <circle cx="327" cy="871" r="3" fill="#71838f"/>
+  <text x="344" y="876" fill="#405766" font-size="14">Are there dates or classroom contexts worth reviewing in the source records?</text>
+  <circle cx="327" cy="910" r="3" fill="#71838f"/>
+  <text x="344" y="915" fill="#405766" font-size="14">Is there information outside Teacher OS that changes how these facts should be understood?</text>
+  <circle cx="327" cy="949" r="3" fill="#71838f"/>
+  <text x="344" y="954" fill="#405766" font-size="14">What follow-up, if any, does your professional judgment suggest?</text>
+
+  <text x="1480" y="992" text-anchor="end" fill="#71838f" font-size="11">Generated view · not stored · source records remain in the teacher's Google Workspace</text>
+</svg>
