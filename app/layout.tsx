@@ -13,7 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : 'http://localhost:3000'),
+  ),
   title: 'Teacher OS — Technical Case Study',
   description: 'An evidence-led case study of Teacher OS, a privacy-conscious classroom operations platform designed and developed by Steven Finston.',
   openGraph: {
