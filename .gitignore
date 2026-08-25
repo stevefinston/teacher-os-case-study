@@ -10,3 +10,4 @@ dist/
 # Internal evidence and publication notes stay outside the public repository.
 EVIDENCE.md
 PUBLICATION_CHECKLIST.md
+.vercel
