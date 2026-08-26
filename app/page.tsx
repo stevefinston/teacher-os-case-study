@@ -330,8 +330,8 @@ export default function Home() {
         <div className="footer-links">
           <a href="https://www.theteacheros.com"><strong>Teacher OS</strong><span>Live product ↗</span></a>
           <a href="https://github.com/stevefinston"><strong>GitHub</strong><span>stevefinston ↗</span></a>
-          <a href="https://www.linkedin.com/in/steven-finston-64a2ba413/"><strong>LinkedIn</strong><span>Professional profile ↗</span></a>
-          <a href="https://www.linkedin.com/in/steven-finston-64a2ba413/details/featured/"><strong>Résumé</strong><span>LinkedIn Featured ↗</span></a>
+          <a href="https://www.linkedin.com/in/stevenfinston/"><strong>LinkedIn</strong><span>Professional profile ↗</span></a>
+          <a href="https://www.linkedin.com/in/stevenfinston/details/featured/"><strong>Résumé</strong><span>LinkedIn Featured ↗</span></a>
         </div>
         <p className="footer-note">Prepared for employer review. Repository remains private. All student examples are synthetic.</p>
       </footer>

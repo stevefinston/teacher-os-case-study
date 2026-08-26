@@ -6,7 +6,7 @@ Teacher OS is a live, privacy-conscious classroom operations platform I designed
 
 It adds an operational layer across the tools teachers already use while keeping the teacher—not an algorithm—as the professional making the decision.
 
-[View the live case study](https://teacher-os-case-study.vercel.app/) · [View Teacher OS](https://www.theteacheros.com) · [GitHub profile](https://github.com/stevefinston) · [LinkedIn](https://www.linkedin.com/in/steven-finston-64a2ba413/) · [Public résumé](https://www.linkedin.com/in/steven-finston-64a2ba413/details/featured/)
+[View the live case study](https://teacher-os-case-study.vercel.app/) · [View Teacher OS](https://www.theteacheros.com) · [GitHub profile](https://github.com/stevefinston) · [LinkedIn](https://www.linkedin.com/in/stevenfinston/) · [Public résumé](https://www.linkedin.com/in/stevenfinston/details/featured/)
 
 > **Evidence status:** designed, implemented, tested, and deployed. Selected authenticated owner workflows have been production-verified. External-teacher adoption and measurable outcome evidence are still pending.
 
